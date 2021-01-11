@@ -2211,4 +2211,215 @@ a:hover, a:focus {
   .radio input[type="radio"]:disabled + .radio-indicator {
     background-image: none;
   }
+
+  /* Breadcrumbs
+/* ------------------------- */
+.breadcrumb {
+    padding: 3px 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-radius: 0;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item {
+    padding-left: 5px;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    padding-right: 5px;
+    color: #a59cae !important;
+  }
+  
+  .breadcrumb-item > a {
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+  }
+  
+  .breadcrumb-item > a:hover {
+    color: #00ff5b !important;
+  }
+  
+  .breadcrumb-item.active {
+    color: #a59cae;
+  }
+  
+  .page-heading__breadcrumb {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  @media (min-width: 768px) {
+    .align-self-end .page-heading__breadcrumb {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+    }
+  }
+
+  /*
+// #Page Heading
+// --------------------------------------------------
+*/
+.page-heading {
+    background-color: #362b45;
+    background-image: url("assets/images/samples/page-heading.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+  }
+  
+  @media (min-width: 992px) {
+    .page-heading {
+      padding: 45px 0 40px 0;
+    }
+  }
+  
+  .page-heading .breadcrumb {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    padding: 0;
+  }
+  
+  @media (min-width: 992px) {
+    .page-heading .breadcrumb {
+      font-size: 11px;
+      padding: 3px 0;
+    }
+  }
+  
+  .page-heading .breadcrumb > li + li::before {
+    color: #a59cae;
+    font-weight: normal;
+  }
+  
+  .page-heading .breadcrumb > li > a {
+    color: #fff;
+  }
+  
+  .page-heading .breadcrumb > li > a:hover {
+    color: #00ff5b;
+  }
+  
+  .page-heading::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("assets/images/gridtile_4x4.gif");
+    background-size: 4px 4px;
+    background-position: 100% 0;
+    background-repeat: repeat;
+    opacity: 1;
+  }
+  
+  .page-heading.effect-duotone .container {
+    position: relative;
+    z-index: 3;
+  }
+  
+  .page-heading--horizontal {
+    text-align: inherit;
+  }
+  
+  @media (max-width: 767px) {
+    .page-heading--horizontal .row {
+      display: block;
+      text-align: center;
+    }
+  }
+  
+  .page-heading__title {
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: -0.02em;
+    font-size: 24px;
+    margin-bottom: 0;
+    font-style: italic;
+  }
+  
+  @media (min-width: 992px) {
+    .page-heading__title {
+      font-size: 32px;
+    }
+  }
+  
+  .page-heading__title .highlight {
+    color: #00ff5b;
+  }
+
+  .page-heading--post-bg {
+    background-image: url("assets/images/esports/samples/single-post-img14.jpg");
+  }
+  
+  .page-heading--overlay {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .page-heading--overlay::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+  }
+  
+  .page-heading--duotone {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .page-heading--duotone::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: none;
+    background-color: transparent;
+  }
+  
+  .page-heading--simple {
+    height: 240px;
+    background-image: url("assets/images/esports/samples/single-post-img9.jpg");
+  }
+  
+  .page-heading--simple::before {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .page-heading--simple {
+      height: 320px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .page-heading--simple {
+      height: 360px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .page-heading--simple {
+      height: 420px;
+    }
+  }
   
