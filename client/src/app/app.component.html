@@ -1,7 +1,244 @@
-<h1>{{title}}</h1>
+<div class="container mt-5">
 
-<ul>
-  <li *ngFor="let user of users">
-    {{user.id}} - {{user.username}}
-  </li>
-</ul>
+  <div class="row">
+    <div class="col">
+      <h1>{{title}} Resources</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <h5>Unordered List</h5>
+      <ul class="list">
+        <li *ngFor="let user of users">
+          {{user.id}} - {{user.username}}
+        </li>
+      </ul>
+      <h5>Ordered List</h5>
+      <ol class="list">
+        <li *ngFor="let user of users">
+          {{user.id}} - {{user.username}}
+        </li>
+      </ol>
+    </div>
+    <div class="col">
+      <h5>Links & Warnings</h5>
+      <p><a href="#">Link</a></p>
+      <p class="text-success">Success</p>
+      <p class="text-danger">Danger</p>
+      <p class="text-warning">Warning</p>
+      <p class="text-info">Info</p>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col">
+      <!-- Alerts -->
+      <h5 class="pb-4">Alerts</h5>
+      <div class="alert alert-warning alert--rounded">
+        <strong>Do you have an account? <a href="#">Click Here</a> to login now and create a new account</strong>
+      </div>
+  
+      <div class="alert alert-danger alert--rounded alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Error Box!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      </div>
+  
+      <div class="alert alert-info alert--rounded">
+        <strong>Info Box!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      </div>
+  
+      <div class="alert alert-success alert--rounded">
+        <button type="button" class="btn btn-xs btn-default alert-btn-right">Go back to Home</button>
+        <strong>Success box with Button!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col">
+      <!-- Buttons -->
+      <h5 class="pb-4">Buttons</h5>
+      <div class="row mt-4">
+        <div class="col-sm-6 col-xl-3">
+          <p>
+            <a href="#" class="btn btn-default btn-lg">Large Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-default">Medium Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-default btn-sm">Small Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-default btn-xs">Extra Small</a>
+          </p>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <p>
+            <a href="#" class="btn btn-primary btn-lg">Large Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-primary">Medium Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-primary btn-sm">Small Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-primary btn-xs">Extra Small</a>
+          </p>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <p>
+            <a href="#" class="btn btn-primary-inverse btn-lg">Large Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-primary-inverse">Medium Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-primary-inverse btn-sm">Small Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-primary-inverse btn-xs">Extra Small</a>
+          </p>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <p>
+            <a href="#" class="btn btn-default-alt btn-lg">Large Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-default-alt">Medium Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-default-alt btn-sm">Small Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-default-alt btn-xs">Extra Small</a>
+          </p>
+        </div>
+      </div>
+  
+      <div class="spacer"></div>
+  
+      <div class="row  mt-4">
+        <div class="col-sm-6 col-xl-3">
+          <p>
+            <a href="#" class="btn btn-success btn-lg">Large Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-success">Medium Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-success btn-sm">Small Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-success btn-xs">Extra Small</a>
+          </p>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <p>
+            <a href="#" class="btn btn-info btn-lg">Large Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-info">Medium Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-info btn-sm">Small Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-info btn-xs">Extra Small</a>
+          </p>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <p>
+            <a href="#" class="btn btn-warning btn-lg">Large Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-warning">Medium Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-warning btn-sm">Small Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-warning btn-xs">Extra Small</a>
+          </p>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <p>
+            <a href="#" class="btn btn-danger btn-lg">Large Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-danger">Medium Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-danger btn-sm">Small Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-danger btn-xs">Extra Small</a>
+          </p>
+        </div>
+      </div>
+  
+      <div class="spacer"></div>
+  
+      <div class="row mt-4">
+        <div class="col-sm-6 col-xl-3">
+          <p>
+            <a href="#" class="btn btn-success btn-outline btn-lg">Large Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-success btn-outline">Medium Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-success btn-outline btn-sm">Small Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-success btn-outline btn-xs">Extra Small</a>
+          </p>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <p>
+            <a href="#" class="btn btn-info btn-outline btn-lg">Large Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-info btn-outline">Medium Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-info btn-outline btn-sm">Small Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-info btn-outline btn-xs">Extra Small</a>
+          </p>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <p>
+            <a href="#" class="btn btn-warning btn-outline btn-lg">Large Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-warning btn-outline">Medium Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-warning btn-outline btn-sm">Small Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-warning btn-outline btn-xs">Extra Small</a>
+          </p>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <p>
+            <a href="#" class="btn btn-danger btn-outline btn-lg">Large Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-danger btn-outline">Medium Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-danger btn-outline btn-sm">Small Button</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-danger btn-outline btn-xs">Extra Small</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
