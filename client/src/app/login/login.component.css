@@ -1,0 +1,478 @@
+/* Card
+/* ------------------------- */
+.card {
+    border: 1px solid #4b3b60;
+    border-radius: 4px;
+    background-color: #392d49;
+    margin-bottom: 15px;
+  }
+  
+  .card--row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  
+  .card--block {
+    display: block;
+  }
+  
+  .card--clean {
+    background: none;
+    border: none;
+  }
+  
+  .card--clean .card__header {
+    background-color: #392d49;
+    border: 1px solid #4b3b60;
+    border-radius: 4px;
+  }
+  
+  .card--clean > .card__content {
+    padding: 15px 0 0 0;
+  }
+  
+  .card--has-table > .card__content {
+    padding: 0;
+  }
+  
+  .card--has-table > .card__content .table {
+    margin-bottom: 0;
+  }
+  
+  .card--no-paddings > .card__content {
+    padding: 0;
+  }
+  
+  .card--squared-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+  .card__header {
+    padding: 27px 23px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    position: relative;
+    border-bottom: 1px solid #4b3b60;
+    overflow: hidden;
+    background-color: #403351;
+  }
+  
+  .card__header ~ .card__header {
+    border-radius: 0;
+  }
+  
+  .card__header ~ .card__header::before {
+    border-radius: 0;
+  }
+  
+  .card__header::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 6px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #00ff5b;
+    border-radius: 3px 0 0 0;
+  }
+  
+  .card__header > h4 {
+    font-size: 16px;
+    line-height: 1.2em;
+    letter-spacing: -0.02em;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+  
+  @media (min-width: 992px) {
+    .card__header .card-header__button {
+      float: right;
+    }
+  }
+  
+  .card__header--has-btn {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  
+  .card__header--has-btn > h4 {
+    margin-bottom: .5em;
+  }
+  
+  @media (min-width: 480px) {
+    .card__header--has-btn > h4 {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+  
+  .card__header--has-filter {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  
+  .card__header--has-filter > h4 {
+    display: inline-block;
+  }
+  
+  .card__header--has-filter .category-filter {
+    padding-top: 5px;
+  }
+  
+  @media (min-width: 480px) {
+    .card__header--has-filter .category-filter {
+      float: right;
+      padding-top: 0;
+    }
+  }
+  
+  .card__header--has-legend {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  
+  .card__header--has-legend > h4 {
+    display: inline-block;
+  }
+  
+  .card__header--has-legend .chart-legend {
+    padding-top: 5px;
+  }
+  
+  @media (min-width: 480px) {
+    .card__header--has-legend .chart-legend {
+      float: right;
+      padding-top: 0;
+    }
+  }
+  
+  .card__header--has-checkbox {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  
+  .card__header--has-checkbox > h4 {
+    margin-bottom: .5em;
+  }
+  
+  @media (min-width: 480px) {
+    .card__header--has-checkbox > h4 {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+  
+  @media (min-width: 480px) {
+    .card__header--has-checkbox .checkbox {
+      float: right;
+      padding-top: 0;
+      font-size: 10px;
+      font-weight: bold;
+    }
+  }
+  
+  .card__header--has-toggle {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .card__header--has-toggle .switch {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: right;
+  }
+  
+  .card__header--has-arrows .slick-prev,
+  .card__header--has-arrows .slick-next {
+    top: 25px;
+  }
+  
+  .card__header--has-team-info {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  
+  .card__header--no-highlight::before {
+    display: none;
+  }
+  
+  .card__header--double {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .card__header--double::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 6px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #ffb400;
+    border-radius: 0 3px 0 0;
+  }
+  
+  .card__content {
+    padding: 24px 24px;
+  }
+  
+  .card__content-inner {
+    padding: 20px;
+  }
+  
+  .card__content--header-bg {
+    background-color: #403351;
+  }
+  
+  .card__content--pattern-dotted {
+    background-image: url("../../assets/images/pattern-12x12.gif");
+    background-position: 6px 10px;
+  }
+  
+  .card__subheader {
+    background: #403351;
+    border-top: 1px solid #4b3b60;
+    border-bottom: 1px solid #4b3b60;
+    text-align: center;
+    padding: 8px 0;
+    margin-left: -24px;
+    margin-right: -24px;
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: 992px) {
+    .card__subheader {
+      padding: 11px 0;
+      margin-bottom: 30px;
+    }
+  }
+  
+  .card__subheader h5 {
+    margin-bottom: 0;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+  
+  .card__subheader--nomargins {
+    margin: 0;
+  }
+  
+  .card__subheader--sm h5 {
+    font-size: 11px;
+    line-height: 1.2em;
+  }
+  
+  .card__subheader--side {
+    text-align: left;
+    border-top: 0;
+    background-color: transparent;
+    padding: 15px 24px;
+  }
+  
+  .card__subheader--side h5 {
+    font-style: italic;
+  }
+  
+  .card__subheader--flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 1px solid #4b3b60;
+  }
+  
+  .card__subheader--flex :last-child {
+    margin-left: auto;
+  }
+  
+  .card__subheader--flex h5 {
+    font-style: normal;
+  }
+  
+  .card__subheader--clean {
+    background-color: transparent;
+  }
+  
+  .card__subheader--clean > h5 {
+    font-weight: 400;
+    color: #a59cae;
+    font-size: 9px;
+  }
+  
+  .alc-teams-legend {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .alc-teams-legend__info {
+    margin-left: auto;
+  }
+  
+  @media (min-width: 992px) {
+    .alc-teams-legend__info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+  }
+  
+  .alc-teams-legend__teams {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  @media (max-width: 991px) {
+    .alc-teams-legend__teams {
+      margin-bottom: 10px;
+    }
+  }
+  
+  .alc-teams-legend__teams + .btn {
+    margin-left: 20px;
+  }
+  
+  .alc-teams-legend__team {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .alc-teams-legend__team + .alc-teams-legend__team {
+    margin-left: 20px;
+  }
+  
+  .alc-teams-legend__team-color {
+    width: 8px;
+    height: 8px;
+    background-color: #00ff5b;
+    border-radius: 2px;
+    margin-right: 10px;
+  }
+  
+  .alc-teams-legend__team-color--color-info {
+    background-color: #00deff;
+  }
+  
+  .alc-teams-legend__team-color--color-success {
+    background-color: #00ff5b;
+  }
+  
+  .alc-teams-legend__team-color--color-4 {
+    background-color: #ffb400;
+  }
+  
+  .alc-teams-legend__team-color--color-clovers {
+    background-color: #aaf20e;
+  }
+  
+  @media (min-width: 992px) {
+    .card--lg .card__content {
+      padding: 43px 43px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .card--xlg .card__content {
+      padding: 70px 70px;
+    }
+  }
+  
+  .card--alt-color .card__header::before {
+    background-color: #ffb400;
+  }
+  
+  .card--color-clovers .card__header::before {
+    background-color: #aaf20e;
+  }
+  
+  .card--color--info .card__header::before {
+    background-color: #00deff;
+  }
+  
+  .card__header--shop-filter {
+    padding: 0;
+  }
+  
+  .card--section {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .card--info .card__content p {
+    font-size: .86em;
+    line-height: 1.83em;
+  }
+  
+  .card--info .contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-top: 1px solid #4b3b60;
+  }
+  
+  .card--info .contact-info__item {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 100%;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    margin: -1px 0 0 -1px;
+    text-align: center;
+    padding: 25px 10px;
+    border-left: 1px solid #4b3b60;
+    border-top: 1px solid #4b3b60;
+  }
+  
+  .card--info .contact-info__icon {
+    color: #00ff5b;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .card--info .contact-info__label {
+    font-size: .86em;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .card--info .contact-info__label a {
+    color: #fff;
+  }
+  
+  .card--info .contact-info__label a:hover {
+    color: #1bd75e;
+  }
