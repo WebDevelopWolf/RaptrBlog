@@ -46,8 +46,8 @@
 			
 						<!-- Account Navigation -->
 						<ul class="nav-account">
-                            <li class="nav-account__item" *ngIf="accountService.currentUser$ | async"><a href="#">Clever Girl <span class="highlight">Liane</span></a></li>
-                            <li class="nav-account__item" *ngIf="accountService.currentUser$ | async"><a href="#">Your Account</a></li>
+                            <li class="nav-account__item" *ngIf="accountService.currentUser$ | async"><a routerLink="/profile">Clever Girl <span class="highlight">Liane</span></a></li>
+                            <li class="nav-account__item" *ngIf="accountService.currentUser$ | async"><a routerLink="/profile">Your Account</a></li>
                             <li class="nav-account__item nav-account__item--logout" *ngIf="accountService.currentUser$ | async"><a (click)="accountService.logout()">Logout</a></li>
 							<li class="nav-account__item nav-account__item--logout" *ngIf="(accountService.currentUser$ | async) === null"><a routerLink="/login">Login</a></li>
 							<li class="nav-account__item nav-account__item--logout" *ngIf="(accountService.currentUser$ | async) === null"><a routerLink="/register">Register</a></li>
@@ -73,9 +73,9 @@
 						<nav class="main-nav">
 							<ul class="main-nav__list">
 								<li class="" routerLinkActive="active"><a routerLink="/">Home</a></li>
-                                <li class="" routerLinkActive="active"><a href="#">Blog</a></li>
-                                <li class="" routerLinkActive="active"><a href="#">Reviews</a></li>
-								<li class="" routerLinkActive="active"><a href="#">About</a></li>
+                                <li class="" routerLinkActive="active"><a routerLink="/blog">Blog</a></li>
+                                <li class="" routerLinkActive="active"><a routerLink="/review">Reviews</a></li>
+								<li class="" routerLinkActive="active"><a routerLink="/about">About</a></li>
 								<li class="" routerLinkActive="active"><a href="https://shop.spreadshirt.co.uk/raptrkit/">Raptr Kit</a></li>
 						    </ul>
 						</nav>
