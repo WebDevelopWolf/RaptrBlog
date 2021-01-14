@@ -1,0 +1,75 @@
+<!-- Page Heading
+		================================================== -->
+        <div class="page-heading page-heading--horizontal effect-duotone effect-duotone--primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col align-self-start">
+                        <h1 class="page-heading__title">Reactr Raptr<span class="highlight"> Register</span></h1>
+                    </div>
+                    <div class="col align-self-end">
+                        <ol class="page-heading__breadcrumb breadcrumb font-italic">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Register</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Heading / End -->
+        
+        <div class="container mt-5">
+                
+            <div class="row">
+        
+                <div class="col-lg-12">
+        
+                    <!-- Register -->
+                    <div class="card" *ngIf="(accountService.currentUser$ | async) === null">
+                        <div class="card__header">
+                            <h4>Register</h4>
+                        </div>
+                        <div class="card__content">
+        
+                            <!-- Register Form -->
+								<form #registerForm (ngSubmit)="register()">
+									<div class="form-group">
+										<label for="username">Username</label>
+										<input type="text" [(ngModel)]="model.username" name="username" id="register-name" class="form-control" placeholder="Choose a username...">
+									</div>
+									<div class="form-group">
+										<label for="password">Your Password</label>
+										<input type="password" [(ngModel)]="model.password" name="password" id="register-password" class="form-control" placeholder="Enter your password...">
+									</div>
+									<!-- <div class="form-group">
+										<label for="repeat-password">Repeat Password</label>
+										<input type="password" name="repeat-password" id="repeat-password" class="form-control" placeholder="Repeat your password...">
+									</div> -->
+									<div class="form-group">
+										<button class="btn btn-default btn-lg btn-block" type="submit">Create Your Account</button>
+									</div>
+								</form>
+                                <!-- Register Form / End -->
+                                
+        
+                        </div>
+                    </div>
+                    <!-- Login / End -->
+
+                    <!-- Logged In -->
+                    <div class="card" *ngIf="accountService.currentUser$ | async">
+                        <div class="card__header">
+                            <h4>Login</h4>
+                        </div>
+                        <div class="card__content">
+
+                            <h1 class="text-center">Welcome!</h1>
+                            <button (click)="accountService.logout()" class="btn btn-primary-inverse btn-lg btn-block" type="submit">Logout</button>
+
+                        </div>
+                    </div>
+                    <!-- Login / End -->
+                </div>
+        
+            </div>
+        </div>
+        
