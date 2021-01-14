@@ -29,7 +29,11 @@
                             <h4>Register</h4>
                         </div>
                         <div class="card__content">
-        
+                            <!-- Login Error -->
+                            <div class="alert alert-danger alert--rounded alert-dismissible" *ngIf="registerError">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="registerError = false"><span aria-hidden="true">&times;</span></button>
+                                <strong>Register Error:</strong> {{registerErrorText}}
+                            </div>
                             <!-- Register Form -->
 								<form #registerForm (ngSubmit)="register()">
 									<div class="form-group">

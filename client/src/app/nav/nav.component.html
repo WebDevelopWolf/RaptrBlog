@@ -48,8 +48,9 @@
 						<ul class="nav-account">
                             <li class="nav-account__item" *ngIf="accountService.currentUser$ | async"><a href="#">Clever Girl <span class="highlight">Liane</span></a></li>
                             <li class="nav-account__item" *ngIf="accountService.currentUser$ | async"><a href="#">Your Account</a></li>
-                            <li class="nav-account__item nav-account__item--logout" *ngIf="accountService.currentUser$ | async"><a href="#">Logout</a></li>
-                            <li class="nav-account__item nav-account__item--logout" *ngIf="(accountService.currentUser$ | async) === null"><a href="#">Login</a></li>
+                            <li class="nav-account__item nav-account__item--logout" *ngIf="accountService.currentUser$ | async"><a (click)="accountService.logout()">Logout</a></li>
+							<li class="nav-account__item nav-account__item--logout" *ngIf="(accountService.currentUser$ | async) === null"><a routerLink="/login">Login</a></li>
+							<li class="nav-account__item nav-account__item--logout" *ngIf="(accountService.currentUser$ | async) === null"><a routerLink="/register">Register</a></li>
 						</ul>
 						<!-- Account Navigation / End -->
 					</div>
@@ -64,18 +65,18 @@
 		
 						<!-- Header Logo -->
 						<div class="header-logo">
-							<a href="#"><img src="assets/images/esports/logo.png" srcset="assets/images/esports/logo@2x.png 2x" alt="Reactr Raptr" class="header-logo__img"></a>
+							<a routerLink="/"><img src="assets/images/esports/logo.png" srcset="assets/images/esports/logo@2x.png 2x" alt="Reactr Raptr" class="header-logo__img"></a>
 						</div>
 						<!-- Header Logo / End -->
 		
 						<!-- Main Navigation -->
 						<nav class="main-nav">
 							<ul class="main-nav__list">
-								<li class=""><a href="#">Home</a></li>
-                                <li class=""><a href="#">Blog</a></li>
-                                <li class=""><a href="#">Reviews</a></li>
-								<li class=""><a href="#">About</a></li>
-								<li class=""><a href="#">Raptr Kit</a></li>
+								<li class="" routerLinkActive="active"><a routerLink="/">Home</a></li>
+                                <li class="" routerLinkActive="active"><a href="#">Blog</a></li>
+                                <li class="" routerLinkActive="active"><a href="#">Reviews</a></li>
+								<li class="" routerLinkActive="active"><a href="#">About</a></li>
+								<li class="" routerLinkActive="active"><a href="#">Raptr Kit</a></li>
 						    </ul>
 						</nav>
 						<!-- Main Navigation / End -->

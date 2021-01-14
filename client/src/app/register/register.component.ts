@@ -8,6 +8,8 @@ import { AccountService } from '../_services/account.service';
 })
 export class RegisterComponent implements OnInit {
   model: any = {};
+  registerError: boolean;
+  registerErrorText: string;
 
   constructor(public accountService: AccountService) { }
 
@@ -18,7 +20,8 @@ export class RegisterComponent implements OnInit {
     this.accountService.register(this.model).subscribe(response => {
       console.log(response);
     }, error => {
-      console.log(error);
+      this.registerError = true;
+      this.registerErrorText = error.error;
     });
   }
 

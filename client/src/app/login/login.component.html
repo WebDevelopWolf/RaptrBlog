@@ -29,7 +29,11 @@
                     <h4>Login</h4>
                 </div>
                 <div class="card__content">
-
+                    <!-- Login Error -->
+                    <div class="alert alert-danger alert--rounded alert-dismissible" *ngIf="loginError">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="loginError = false"><span aria-hidden="true">&times;</span></button>
+                        <strong>Login Error:</strong> {{loginErrorText}}
+                    </div>
                     <!-- Login Form -->
                     <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
                         <div class="form-group">
