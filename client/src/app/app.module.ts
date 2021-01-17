@@ -19,6 +19,7 @@ import { ReviewListComponent } from './review/review-list/review-list.component'
 import { ReviewPostComponent } from './review/review-post/review-post.component';
 import { ReviewSearchComponent } from './review/review-search/review-search.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HomeComponent } from './home/home.component';
     ReviewListComponent,
     ReviewPostComponent,
     ReviewSearchComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
