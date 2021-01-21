@@ -1,0 +1,37 @@
+<div class="page-heading page-heading--horizontal effect-duotone effect-duotone--primary">
+    <div class="container">
+        <div class="row">
+            <div class="col align-self-start">
+                <h1 class="page-heading__title">Server<span class="highlight"> Errors</span></h1>
+            </div>
+            <div class="col align-self-end">
+                <ol class="page-heading__breadcrumb breadcrumb font-italic">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Resources</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5">
+    <div class="row mt-5">
+        <div class="col text-center">
+            <ng-container>
+            <p><button (click)="get500Error()" class="btn btn-danger btn-lg btn-block">Test 500 Error</button></p>
+            <p><button (click)="get400Error()" class="btn btn-danger btn-lg btn-block">Test 400 Error</button></p>
+            <p><button (click)="get401Error()" class="btn btn-danger btn-lg btn-block">Test 401 Error</button></p>
+            <p><button (click)="get404Error()" class="btn btn-danger btn-lg btn-block">Test 404 Error</button></p>
+            <p><button (click)="get400ValidationError()" class="btn btn-danger btn-lg btn-block">Test 400 Validation Error</button></p>
+            </ng-container>
+        </div>
+    </div>
+    <div class="row mt-5" *ngIf="validationErrors.length > 0">
+        <div class="col text-center">
+            <div class="alert alert-danger alert--rounded alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Validation Errors!</strong> <span class="ml-2" *ngFor="let error of validationErrors">{{ error }}</span>
+            </div>
+        </div>
+    </div>
+</div>
