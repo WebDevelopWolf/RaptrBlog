@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.accountService.login(this.model).subscribe(response => {
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('');
     }, error => {
       this.loginError = true;
       this.loginErrorText = error.error;
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
   logout() {
     this.accountService.logout();
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('');
   }
 
 }

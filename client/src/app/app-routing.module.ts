@@ -8,15 +8,22 @@ import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { ReviewListComponent } from './review/review-list/review-list.component';
+import { AuthGuard } from './_guards/auth.guard';
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  {
+    path: '',
+    runGuardsAndResolvers: 'always',
+    canActivate: [AuthGuard],
+    children: [
+      {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
+    ]
+  },
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'register', component: RegisterComponent},
   {path: 'blog', component: BlogListComponent},
-  {path: 'profile', component: ProfileComponent},
   {path: 'review', component: ReviewListComponent},
   {path: 'about', component: AboutComponent},
   {path: '**', component: HomeComponent, pathMatch: 'full'}
